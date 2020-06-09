@@ -1,6 +1,11 @@
 {
   "name": "mc-dungeons-dps-meter",
   "version": "0.1.0",
+  "contributors": [
+    "Sylvain DNS <sylvain.denyse@gmail.com>",
+    "Netoun <coulonnier.nicolas.44@gmail.com>"
+  ],
+  "homepage": "./",
   "main": "public/electron.js",
   "private": true,
   "dependencies": {
@@ -22,12 +27,30 @@
   "scripts": {
     "start": "craco start",
     "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "electron-builder build",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "build": {
+    "appId": "com.sun8.mc-dungeons-dps-meter",
+    "productName": "Minecraft Dungeons DPS Meter",
+    "copyright": "Copyright © 2020",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   },
   "browserslist": {
     "production": [
