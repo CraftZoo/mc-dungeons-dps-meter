@@ -22,7 +22,10 @@
   },
   "devDependencies": {
     "electron": "^9.0.3",
-    "electron-builder": "^22.7.0"
+    "electron-builder": "^22.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5"
   },
   "scripts": {
     "start": "craco start",
@@ -35,7 +38,31 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "react-app"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "no-trailing-spaces": "error",
+      "spaced-comment": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   },
   "build": {
     "appId": "com.sun8.mc-dungeons-dps-meter",

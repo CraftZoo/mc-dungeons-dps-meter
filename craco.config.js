@@ -1,5 +1,5 @@
 module.exports = {
-    webpack: {
-        target: 'electron-renderer'
-    }
+  webpack: {
+    target: 'electron-renderer',
+  },
 }
