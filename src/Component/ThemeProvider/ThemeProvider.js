@@ -1,4 +1,5 @@
 import React from 'react'
+import { Global, css } from '@emotion/core'
 import { ThemeProvider as EmotionProvider } from 'emotion-theming'
 
 export const ThemeProvider = ({ children }) => {
@@ -17,5 +18,18 @@ export const ThemeProvider = ({ children }) => {
     },
   }
 
-  return <EmotionProvider theme={theme}>{children}</EmotionProvider>
+  return (
+    <EmotionProvider theme={theme}>
+      <Global
+        styles={css`
+          html,
+          body {
+            margin: 0;
+            padding: 0;
+          }
+        `}
+      />
+      {children}
+    </EmotionProvider>
+  )
 }
