@@ -1,12 +1,15 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import { jsx } from '@emotion/core'
+import { useTheme } from 'emotion-theming'
 
-const h1 = css`
-  color: pink;
-`
+export const App = () => {
+  const theme = useTheme()
 
-export const App = () => (
-  <div>
-    <h1 css={h1}>Minecraft Dungeons DPS Meter</h1>
-  </div>
-)
+  return (
+    <div>
+      <h1 css={{ color: theme.colors.background }}>
+        Minecraft Dungeons DPS Meter
+      </h1>
+    </div>
+  )
+}
