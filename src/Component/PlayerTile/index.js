@@ -1,0 +1,1 @@
+export { PlayerTile } from './PlayerTile'
