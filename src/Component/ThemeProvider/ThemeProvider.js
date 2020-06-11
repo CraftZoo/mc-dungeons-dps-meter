@@ -2,6 +2,8 @@ import React from 'react'
 import { Global, css } from '@emotion/core'
 import { ThemeProvider as EmotionProvider } from 'emotion-theming'
 
+import MinecrafterFont from './Minecrafter.ttf'
+
 export const ThemeProvider = ({ children }) => {
   const theme = {
     colors: {
@@ -22,10 +24,17 @@ export const ThemeProvider = ({ children }) => {
     <EmotionProvider theme={theme}>
       <Global
         styles={css`
+          @font-face {
+            font-family: 'Minecrafter';
+            src: url(${MinecrafterFont});
+          }
+
           html,
           body {
             margin: 0;
             padding: 0;
+            font-family: 'Minecrafter';
+            font-size: 40px;
           }
         `}
       />
