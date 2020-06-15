@@ -1,5 +1,7 @@
 # Minecraft Dungeons DPS Meter
 
+###### Project made with [@Netoun](https://github.com/Netoun)
+
 > _"Minecraft: Dungeons is an all-new action-adventure game, inspired by classic dungeon crawlers and set in the Minecraft universe!"_
 > IGN - https://www.ign.com/games/minecraft-dungeons
 
