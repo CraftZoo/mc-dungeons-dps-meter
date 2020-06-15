@@ -35,14 +35,22 @@ export const ThemeProvider = ({ children }) => {
             src: url(${MinecraftFont});
           }
 
+          * {
+            box-sizing: border-box;
+          }
+
           html,
           body {
             margin: 0;
             padding: 0;
+          }
+
+          body {
+            min-height: 100vh;
+
+            color: ${theme.colors.text};
             font-family: 'Minecraft';
             font-size: 40px;
-            color: ${theme.colors.text};
-            background-color: ${theme.colors.background};
           }
         `}
       />
