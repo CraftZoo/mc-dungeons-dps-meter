@@ -39,7 +39,7 @@ export const ThemeProvider = ({ children }) => {
           body {
             margin: 0;
             padding: 0;
-            font-family: 'Minecrafter', 'Minecraft';
+            font-family: 'Minecraft';
             font-size: 40px;
             background-color: ${theme.colors.background};
           }
