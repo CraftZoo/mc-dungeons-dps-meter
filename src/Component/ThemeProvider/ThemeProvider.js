@@ -41,6 +41,7 @@ export const ThemeProvider = ({ children }) => {
             padding: 0;
             font-family: 'Minecraft';
             font-size: 40px;
+            color: ${theme.colors.text};
             background-color: ${theme.colors.background};
           }
         `}
