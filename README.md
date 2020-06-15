@@ -9,6 +9,10 @@ In **Minecraft Dungeons**, it is often hard to know which stuff is better than o
 
 The aim of this project is to build the app that will display DPS to the user.
 
+## Mockup
+
+![mockup](./docs/images/mockup.png)
+
 ## Targeted technical stack:
 
 - App wrapper: [Electron](https://github.com/electron/electron)
