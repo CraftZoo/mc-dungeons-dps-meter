@@ -4,6 +4,7 @@ import { ThemeProvider as EmotionProvider } from 'emotion-theming'
 
 import MinecrafterFont from './Fonts/Minecrafter.ttf'
 import MinecraftFont from './Fonts/Minecraft.ttf'
+import Obsidian from './Background/obsidian.jpg'
 
 export const ThemeProvider = ({ children }) => {
   const theme = {
@@ -46,7 +47,9 @@ export const ThemeProvider = ({ children }) => {
           }
 
           body {
-            min-height: 100vh;
+            background-color: ${theme.colors.background};
+            background-image: url(${Obsidian});
+            background-size: 72px;
 
             color: ${theme.colors.text};
             font-family: 'Minecraft';
