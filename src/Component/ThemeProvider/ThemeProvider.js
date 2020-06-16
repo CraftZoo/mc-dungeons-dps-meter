@@ -4,7 +4,7 @@ import { ThemeProvider as EmotionProvider } from 'emotion-theming'
 
 import MinecrafterFont from './Fonts/Minecrafter.ttf'
 import MinecraftFont from './Fonts/Minecraft.ttf'
-import Obsidian from './Background/obsidian.jpg'
+import Dirt from './Background/dirt.jpg'
 
 export const ThemeProvider = ({ children }) => {
   const theme = {
@@ -68,6 +68,10 @@ export const ThemeProvider = ({ children }) => {
             box-sizing: border-box;
           }
 
+          html {
+            height: 100%;
+          }
+
           html,
           body {
             margin: 0;
@@ -75,9 +79,12 @@ export const ThemeProvider = ({ children }) => {
           }
 
           body {
-            background-color: ${theme.colors.background};
-            background-image: url(${Obsidian});
-            background-size: 72px;
+            background-image: linear-gradient(
+                to bottom,
+                rgba(40, 10, 40, 0.85) 0%,
+                rgba(0, 0, 0, 0.7) 50%
+              ),
+              url(${Dirt});
 
             color: ${theme.colors.text};
             font-family: 'Minecraft';
