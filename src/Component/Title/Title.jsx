@@ -8,11 +8,12 @@ export const Title = ({ children, ...props }) => {
   return (
     <h1
       css={css`
-        margin: 48px 72px 40px;
+        margin: 32px 48px 24px;
         font-family: 'Minecrafter';
-        font-size: 80px;
+        font-size: 54px;
         font-weight: normal;
-        text-shadow: 4px 4px ${theme.colors.shadow};
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75),
+          4px 4px ${theme.colors.shadow}, 4px 4px 20px rgba(0, 0, 0, 0.75);
       `}
       {...props}
     >
