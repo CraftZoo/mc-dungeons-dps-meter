@@ -20,3 +20,30 @@ export const useDimensions = ref => {
 
   return { width, height }
 }
+
+export const usePosition = ref => {
+  const [top, setTop] = useState(0)
+  const [right, setRight] = useState(0)
+  const [bottom, setBottom] = useState(0)
+  const [left, setLeft] = useState(0)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const { top, right, bottom, left } = ref.current.getBoundingClientRect()
+
+      setTop(top)
+      setRight(right)
+      setBottom(bottom)
+      setLeft(left)
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [ref])
+
+  return { top, right, bottom, left }
+}
