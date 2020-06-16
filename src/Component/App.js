@@ -38,7 +38,7 @@ export const App = () => {
   const Table = styled.table`
     min-width: 100%;
     padding: 0 72px;
-    border-spacing: 0 16px;
+    border-spacing: 0 32px;
   `
   return (
     <>
