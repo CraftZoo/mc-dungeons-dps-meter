@@ -15,10 +15,10 @@ function createWindow() {
       : `file://${path.join(__dirname, '../build/index.html')}`
   )
 
-  mainWindow.removeMenu()
-
   if (isDev) {
     mainWindow.webContents.openDevTools()
+  } else {
+    mainWindow.removeMenu()
   }
 
   mainWindow.on('closed', () => (mainWindow = null))
