@@ -15,7 +15,7 @@ export const PlayerTile = ({
   const borderRadius = '4px'
   const borderWidth = '4px'
   const Tile = styled.tr`
-    background-color: ${theme.colors.players[number].classic};
+    background-color: ${theme.colors.players[number].primary};
 
     td {
       padding: 10px 30px 0;

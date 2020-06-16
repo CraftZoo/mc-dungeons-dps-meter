@@ -14,10 +14,38 @@ export const ThemeProvider = ({ children }) => {
       shadow: '#717171',
       border: '#000',
       players: [
-        { classic: '#3535ad', dark: '#000054' },
-        { classic: '#229d73', dark: '#11503b' },
-        { classic: '#d94a24', dark: '#6f2612' },
-        { classic: '#ff6bac', dark: '#823758' },
+        {
+          primary: '#d4145a',
+          dark: '#401225',
+          border: {
+            top: '#ff4795',
+            bottom: '#a50039',
+          },
+        },
+        {
+          primary: '#006837',
+          dark: '#002511',
+          border: {
+            top: '#008b42',
+            bottom: '#003e37',
+          },
+        },
+        {
+          primary: '#c56724',
+          dark: '#311a09',
+          border: {
+            top: '#e88a1C',
+            bottom: '#c1472d',
+          },
+        },
+        {
+          primary: '#2e3192',
+          dark: '#0c0c25',
+          border: {
+            top: '#2f4ba7',
+            bottom: '#1b1464',
+          },
+        },
       ],
     },
   }
