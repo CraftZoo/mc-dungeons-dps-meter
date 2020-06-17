@@ -11,6 +11,7 @@ export const App = () => {
       dps: '150K/s',
       totalDamage: '4M',
       percentageDamage: '40%',
+      progress: 1,
     },
     {
       id: 1,
@@ -18,6 +19,7 @@ export const App = () => {
       dps: '100K/s',
       totalDamage: '2,5M',
       percentageDamage: '25%',
+      progress: 0.7,
     },
     {
       id: 2,
@@ -25,6 +27,7 @@ export const App = () => {
       dps: '100k/s',
       totalDamage: '2,5M',
       percentageDamage: '25%',
+      progress: 0.7,
     },
     {
       id: 3,
@@ -32,6 +35,7 @@ export const App = () => {
       dps: '50K/s',
       totalDamage: '1M',
       percentageDamage: '10%',
+      progress: 0.2,
     },
   ]
 
@@ -47,7 +51,10 @@ export const App = () => {
       <Table>
         <tbody>
           {players.map(
-            ({ id, name, dps, totalDamage, percentageDamage }, index) => (
+            (
+              { id, name, dps, totalDamage, percentageDamage, progress },
+              index
+            ) => (
               <PlayerTile
                 key={`player-tile-${index}`}
                 number={id}
@@ -56,6 +63,7 @@ export const App = () => {
                 dps={dps}
                 totalDamage={totalDamage}
                 percentageDamage={percentageDamage}
+                progress={progress}
               />
             )
           )}

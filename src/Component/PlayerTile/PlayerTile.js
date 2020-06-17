@@ -10,6 +10,7 @@ export const PlayerTile = ({
   dps,
   totalDamage,
   percentageDamage,
+  progress,
 }) => {
   const theme = useTheme()
 
@@ -19,8 +20,15 @@ export const PlayerTile = ({
 
   const colors = theme.colors.players[number]
   const offset = 8
+  const backgroundBreak = progress * 100
   const Tile = styled.tr`
-    background-color: ${colors.primary};
+    background: linear-gradient(
+      to right,
+      ${colors.primary},
+      ${colors.primary} ${backgroundBreak}%,
+      ${colors.dark} ${backgroundBreak}%,
+      ${colors.dark}
+    );
 
     &::before,
     &::after {
