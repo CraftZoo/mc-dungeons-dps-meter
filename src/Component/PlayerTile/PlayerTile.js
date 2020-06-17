@@ -60,8 +60,20 @@ export const PlayerTile = ({
   `
 
   const Name = styled.td`
+    align-items: center;
     min-width: 50%;
     font-family: 'Minecrafter';
+
+    .name-content {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .place {
+      align-self: flex-end;
+      min-width: 40px;
+    }
   `
 
   const Item = styled.td`
@@ -71,7 +83,9 @@ export const PlayerTile = ({
   return (
     <Tile ref={ref}>
       <Name>
-        {place} - {name}
+        <div className="name-content">
+          <div className="place">{place}</div> - {name}
+        </div>
       </Name>
       <Item>{dps}</Item>
       <Item>{totalDamage}</Item>
