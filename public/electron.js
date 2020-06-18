@@ -8,17 +8,17 @@ const isDev = require('electron-is-dev')
 let mainWindow
 
 function createWindow() {
-  mainWindow = new BrowserWindow({ width: 950, height: 620 })
+  mainWindow = new BrowserWindow({ width: 1000, height: 620 })
   mainWindow.loadURL(
     isDev
       ? 'http://localhost:3000'
       : `file://${path.join(__dirname, '../build/index.html')}`
   )
 
-  mainWindow.removeMenu()
-
   if (isDev) {
     mainWindow.webContents.openDevTools()
+  } else {
+    mainWindow.removeMenu()
   }
 
   mainWindow.on('closed', () => (mainWindow = null))

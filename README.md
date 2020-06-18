@@ -1,7 +1,5 @@
 # Minecraft Dungeons DPS Meter
 
-###### Project made with [@Netoun](https://github.com/Netoun)
-
 > _"Minecraft: Dungeons is an all-new action-adventure game, inspired by classic dungeon crawlers and set in the Minecraft universe!"_
 > IGN - https://www.ign.com/games/minecraft-dungeons
 
@@ -9,9 +7,16 @@ In **Minecraft Dungeons**, it is often hard to know which stuff is better than o
 
 The aim of this project is to build the app that will display DPS to the user.
 
-## Mockup
+## Actual app look
+
+![app](./docs/images/app.png)
+
+<details>
+  <summary>Mockup</summary>
 
 ![mockup](./docs/images/mockup.png)
+
+</details>
 
 ## Targeted technical stack:
 
@@ -27,3 +32,8 @@ Start development environment:
 
 Build:
 `yarn electron-pack`
+
+## Contributors
+
+- [@Netoun](https://github.com/Netoun)
+- [@SylvainDNS](https://github.com/SylvainDNS)
