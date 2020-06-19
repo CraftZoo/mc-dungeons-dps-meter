@@ -1,47 +1,14 @@
 import React, { createContext, useReducer, useContext } from 'react'
 
-const INITIAL_STATE = {
-  players: [
-    {
-      id: 0,
-      name: 'Player1',
-      dps: '150K/s',
-      totalDamage: '4M',
-      percentageDamage: '40%',
-      progress: 1,
-    },
-    {
-      id: 1,
-      name: 'Player2',
-      dps: '100K/s',
-      totalDamage: '2,5M',
-      percentageDamage: '25%',
-      progress: 0.7,
-    },
-    {
-      id: 2,
-      name: 'Player3',
-      dps: '100k/s',
-      totalDamage: '2,5M',
-      percentageDamage: '25%',
-      progress: 0.7,
-    },
-    {
-      id: 3,
-      name: 'Player4',
-      dps: '50K/s',
-      totalDamage: '1M',
-      percentageDamage: '10%',
-      progress: 0.2,
-    },
-  ],
-}
+const INITIAL_STATE = {}
 
 const StateContext = createContext()
 const DispatchContext = createContext()
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'receivedPlayers':
+      return { ...state, players: action.payload }
     default:
       throw Error(`Unhandled action type: ${action.type}`)
   }
