@@ -6,12 +6,20 @@ const StateContext = createContext()
 const DispatchContext = createContext()
 
 const reducer = (state, action) => {
-  switch (action.type) {
-    case 'receivedPlayers':
-      return { ...state, players: action.payload }
-    default:
-      throw Error(`Unhandled action type: ${action.type}`)
-  }
+  const nextState = (() => {
+    switch (action.type) {
+      case 'receivedPlayers':
+        return { ...state, players: action.payload }
+      default:
+        throw Error(`Unhandled action type: ${action.type}`)
+    }
+  })()
+
+  console.log(`${action.type} action dispatched: `, action)
+  console.log('Previous state: ', state)
+  console.log('Next state', nextState)
+
+  return nextState
 }
 
 export const PlayerProvider = ({ children }) => {
